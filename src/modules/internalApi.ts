@@ -3,7 +3,7 @@ import Settings from '../helpers/settings';
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-interface RequestConfig {
+export interface RequestConfig {
     url: string;
     method?: string;
     params?: Record<string, any> | null;
@@ -12,7 +12,7 @@ interface RequestConfig {
     headers?: Record<string, string>;
 }
 
-export interface RequestResponse<T = any> {
+interface RequestResponse<T = any> {
     data: T;
     status: number;
     headers: Headers;
