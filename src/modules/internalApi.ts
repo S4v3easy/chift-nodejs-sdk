@@ -12,7 +12,7 @@ export interface RequestConfig {
     headers?: Record<string, string>;
 }
 
-export interface RequestResponse<T = any> {
+interface RequestResponse<T = any> {
     data: T;
     status: number;
     headers: Headers;
